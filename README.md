@@ -1,14 +1,17 @@
 # db-elastic-kibana
 
-# Requirements:
-- devbox
+# Requirements
+- `devbox`
 
 # Usage
 ```shell
 $ devbox install
-# Run in standalone
-$ devbox run elasticsearch
-$ devbox run kibana
-# Run in services
+# Run in foreground
 $ devbox services up
+# Run in background
+$ devbox services up --background
 ```
+
+## Endpoints
+- ES url: http://localhost:19200
+- Kibana url: http://localhost:15601
