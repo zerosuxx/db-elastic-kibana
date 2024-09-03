@@ -1,0 +1,17 @@
+{
+    "$schema":  "https://raw.githubusercontent.com/jetify-com/devbox/0.10.7/.schema/devbox.schema.json",
+    "packages": [
+      "github:zerosuxx/nixpkgs#elasticsearch",
+      "github:zerosuxx/nixpkgs#kibana"
+    ],
+    "env": {
+      "ES_CONFIG_WORKING_DIR": "$PWD/elastic",
+      "ES_CONFIG_BOOTSTRAP_MEMORY__LOCK": "true",
+      "ES_CONFIG_DISCOVERY_TYPE": "single-node",
+      "ES_CONFIG_XPACK_SECURITY_ENABLED": "false",
+      "ES_CONFIG_XPACK_SECURITY_ENROLLMENT_ENABLED": "false",
+      "ES_CONFIG_XPACK_SECURITY_HTTP_SSL_ENABLED": "false",
+      "ES_CONFIG_XPACK_SECURITY_TRANSPORT_SSL_ENABLED": "false",
+      "KBN_CONFIG_WORKING_DIR": "$PWD/kibana"
+    }
+  }

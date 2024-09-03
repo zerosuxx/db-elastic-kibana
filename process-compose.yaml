@@ -1,0 +1,12 @@
+version: "0.5"
+
+processes:
+  elasticsearch:
+    command: "elasticsearch"
+    availability:
+      restart: "always"
+
+  kibana:
+    command: "kibana"
+    availability:
+      restart: "always"
