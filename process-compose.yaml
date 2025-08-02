@@ -10,3 +10,16 @@ processes:
     command: "kibana"
     availability:
       restart: "always"
+
+  db:
+    command: "pg_ctl start"
+    is_daemon: true
+    shutdown:
+      command: "pg_ctl stop -m fast"
+    availability:
+      restart: "always"
+      
+  redis:
+    command: "redis-server $REDIS_CONF --port $REDIS_PORT"
+    availability:
+      restart: "always"
